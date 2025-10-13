@@ -36,7 +36,7 @@ const Navbar = ({ scrolled }) => (
     <div className="flex justify-between items-center px-10">
       <div className="flex items-center space-x-3">
         <img src={DhashuLogo} alt="Dhaasu Talk Logo" className="h-20" />
-        <h1 className="text-2xl font-bold font-montserrat tracking-wide text-[#F97316]">
+        <h1 className=" hidden lg:block text-2xl font-bold font-montserrat tracking-wide text-[#F97316]">
           Dhaasu Talk
         </h1>
       </div>
