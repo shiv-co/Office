@@ -183,9 +183,9 @@ export default function HomePage() {
       <div ref={portfolioRef}>
         <Portfolio/>
       </div>
-      <div ref={teamRef}>
+      {/* <div ref={teamRef}>
         <Team />
-      </div>
+      </div> */}
       <Footer />
     </div>
   );

@@ -98,7 +98,8 @@ const Portfolio = () => {
                 </motion.a>
               ))}
             </div>
-          </section>
+          </section> 
+          
         ))}
       </div>
     </div>

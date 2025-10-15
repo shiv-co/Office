@@ -56,10 +56,10 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="bg-[#1B1B1B] text-white py-24 px-6 md:px-20">
+    <section className="bg-[#fec713] text-white py-24 px-6 md:px-20">
       <div className="text-center mb-16">
         <motion.h2
-          className="text-4xl md:text-5xl font-bold text-red-600 hover:text-red-500 mb-3"
+          className="text-4xl md:text-5xl font-bold text-white hover:text-red-600 mb-3"
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -67,7 +67,7 @@ const Services = () => {
           Our Services
         </motion.h2>
         <motion.p
-          className="text-gray-300 text-lg max-w-2xl mx-auto"
+          className="text-gray-100 text-lg max-w-2xl mx-auto"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.8 }}
@@ -80,7 +80,7 @@ const Services = () => {
         {services.map((service, index) => (
           <motion.div
             key={index}
-            className="bg-[#2A2A2A] rounded-2xl overflow-hidden shadow-lg hover:shadow-[#ff4d00]/40 transition-all duration-500"
+            className="bg-gray-300 rounded-2xl overflow-hidden shadow-lg hover:shadow-[#e8ecc7]/80 transition-all duration-500"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.3 }}
@@ -91,15 +91,15 @@ const Services = () => {
               className="h-60 w-full object-cover"
             />
             <div className="p-6">
-              <h3 className="text-2xl font-bold text-red-600 mb-3">
+              <h3 className="text-2xl font-bold text-black mb-3">
                 {service.title}
               </h3>
-              <p className="text-gray-300 mb-4">{service.description}</p>
+              <p className="text-gray-900 mb-4">{service.description}</p>
               <div className="flex justify-between items-center">
                 <span className="text-red-600 font-semibold">
                   {service.price}
                 </span>
-                <button className="bg-red-600 text-white px-5 py-2 rounded-full hover:bg-red-500 transition">
+                <button className="bg-black text-white px-5 py-2 rounded-full hover:bg-gray-900 transition">
                   Read More
                 </button>
               </div>
