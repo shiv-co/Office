@@ -96,12 +96,12 @@ const Services = () => {
               </h3>
               <p className="text-gray-900 mb-4">{service.description}</p>
               <div className="flex justify-between items-center">
-                <span className="text-red-600 font-semibold">
+                {/* <span className="text-red-600 font-semibold">
                   {service.price}
-                </span>
-                <button className="bg-black text-white px-5 py-2 rounded-full hover:bg-gray-900 transition">
+                </span> */}
+                {/* <button className="bg-black text-white px-5 py-2 rounded-full hover:bg-gray-900 transition">
                   Read More
-                </button>
+                </button> */}
               </div>
             </div>
           </motion.div>

@@ -64,10 +64,10 @@ const About = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
         >
-          Dhaasu Talks is a collaborative media venture founded by{" "}
-          <span className="text-[#fec713] font-semibold">
+          Dhaasu Talks is a collaborative media venture {" "}
+          {/* <span className="text-[#fec713] font-semibold">
             Syed Abbas Raza Rizvi, Syed Ali Saif Hussain, and Haider Ali.
-          </span>{" "}
+          </span>{" "} */}
           We specialize in podcasting, video interviews, social media content creation, event
           coverage, and storytelling that inspires and informs.
         </motion.p>
@@ -125,14 +125,14 @@ const About = () => {
           </ul>
         </motion.div>
 
-        <motion.button
+        {/* <motion.button
           className="mt-8 bg-[#fec713] hover:bg-[#fed242] text-white font-semibold px-8 py-3 rounded-full transition"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2 }}
         >
           Discover More
-        </motion.button>
+        </motion.button> */}
       </div>
     </section>
   );

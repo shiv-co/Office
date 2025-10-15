@@ -18,9 +18,9 @@ const categories = [
     title: "YouTube Playlists",
     icon: <FaYoutube className="text-4xl text-[#fec713]" />,
     items: [
-      { img: yt1, title: "Army Day 2025 celebrations", link: "https://www.youtube.com/watch?v=3e2ARI3oDsQ" },
-      { img: yt2, title: "Motivational Talks", link: "https://www.youtube.com/watch?v=kOveEiMFESU" },
-      { img: yt3, title: "Kaun Hai Hum", link: "https://www.youtube.com/watch?v=aP3gmEm3o5Y" },
+      { img: pod1, title: "Army Day 2025 celebrations", link: "#" },
+      { img: pod1, title: "Motivational Talks", link: "#" },
+      { img: pod1, title: "Kaun Hai Hum", link: "#"},
     ],
   },
   {
@@ -91,15 +91,15 @@ const Portfolio = () => {
                     <h3 className="text-xl font-semibold text-[#fec713]">
                       {item.title}
                     </h3>
-                    <p className="text-gray-400 mt-2 text-sm">
+                    {/* <p className="text-gray-400 mt-2 text-sm">
                       Click to explore
-                    </p>
+                    </p> */}
                   </div>
                 </motion.a>
               ))}
             </div>
           </section> 
-          
+
         ))}
       </div>
     </div>

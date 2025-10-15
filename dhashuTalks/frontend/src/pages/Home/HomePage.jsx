@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import DhashuLogo from "../../assets/icons/dhaasuTalk.svg";
-import { FaSpotify, FaSoundcloud, FaApple } from "react-icons/fa";
+import { FaSpotify, FaSoundcloud, FaApple, FaYoutube , FaInstagram, FaFacebook } from "react-icons/fa";
 import Podcast_Img from "../../assets/images/podcast_Image.jpg";
 import { motion } from "framer-motion";
 
@@ -48,7 +48,7 @@ const Navbar = ({ scrolled, scrollToSection }) => (
           { name: "Services", ref: "services" },
           { name: "About Us", ref: "about" },
           { name: "Portfolio", ref: "portfolio" },
-          { name: "Our Team", ref: "team" },
+          
         ].map((item) => (
           <li
             key={item.name}
@@ -119,22 +119,25 @@ const HeroSection = React.forwardRef((props, ref) => (
 
       <div className="flex justify-center space-x-5">
         <a
-          href="#"
+          href="https://www.youtube.com/@Dhasutalksofficial/featured"
+          target="_blank"
           className="flex items-center space-x-2 bg-[#fec713] px-5 py-3 rounded-full hover:bg-[#fed242] transition"
         >
-          <FaSoundcloud /> <span>SoundCloud</span>
+           <FaYoutube /> <span>Youtube</span>
         </a>
         <a
-          href="#"
+          href="https://www.instagram.com/dhasutalks"
+          target="_blank"
           className="flex items-center space-x-2 bg-[#fec713] px-5 py-3 rounded-full hover:bg-[#fed242] transition"
         >
-          <FaSpotify /> <span>Spotify</span>
+          <FaInstagram /> <span>Instagram</span>
         </a>
         <a
-          href="#"
+          href="https://www.facebook.com/share/17fnZdrPRz/"
+          target="_blank"
           className="flex items-center space-x-2 bg-[#fec713] px-5 py-3 rounded-full hover:bg-[#fed242] transition"
         >
-          <FaApple /> <span>Apple</span>
+          <FaFacebook /> <span>Facebook</span>
         </a>
       </div>
     </div>
