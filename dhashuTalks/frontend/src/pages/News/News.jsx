@@ -140,6 +140,7 @@ const News = () => {
           </div>
         ))}
       </motion.div>
+      <p className="text-sm text-gray-300 text-center p-1 md:hidden">  Swipe</p>
       <div className="relative mt-5 md:hidden ">
         <button
           onClick={scrollLeft}
