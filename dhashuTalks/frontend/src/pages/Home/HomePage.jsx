@@ -8,6 +8,7 @@ import About from "../About/About.jsx";
 import Services from "../Services/Services.jsx";
 import Footer from "../Footer/Footer.jsx";
 import Portfolio from "../Portfolio/Portfolio.jsx";
+import News from "../News/News.jsx";
 // import Team from "../Team/Team.jsx";
 
 // TypingText Component
@@ -58,6 +59,7 @@ const Navbar = ({ scrolled, scrollToSection }) => {
             { name: "Services", ref: "services" },
             { name: "About Us", ref: "about" },
             { name: "Portfolio", ref: "portfolio" },
+            { name: "News", ref: "news" },
           ].map((item) => (
             <li
               key={item.name}
@@ -103,6 +105,7 @@ const Navbar = ({ scrolled, scrollToSection }) => {
             { name: "Services", ref: "services" },
             { name: "About Us", ref: "about" },
             { name: "Portfolio", ref: "portfolio" },
+              { name: "News", ref: "news" },
           ].map((item) => (
             <div
               key={item.name}
@@ -206,6 +209,7 @@ export default function HomePage() {
   const aboutRef = useRef(null);
   const servicesRef = useRef(null);
   const portfolioRef = useRef(null);
+  const newsRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -222,6 +226,8 @@ export default function HomePage() {
       servicesRef.current.scrollIntoView({ behavior: "smooth" });
     else if (section === "portfolio" && portfolioRef.current)
       portfolioRef.current.scrollIntoView({ behavior: "smooth" });
+    else if (section === "news" && newsRef.current)
+      newsRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -236,6 +242,9 @@ export default function HomePage() {
       </div>
       <div ref={portfolioRef}>
         <Portfolio />
+      </div>
+      <div ref={newsRef}>
+        <News />
       </div>
       <Footer />
     </div>
