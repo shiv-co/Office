@@ -203,8 +203,14 @@ const HeroSection = React.forwardRef((props, ref) => (
 ));
 
 // HomePage Component
+
+
+
 export default function HomePage() {
+
+  const [isFirstVisit, setIsFirstVisit] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const servicesRef = useRef(null);
@@ -216,6 +222,19 @@ export default function HomePage() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+  
+  useEffect(() => {
+  const hasVisited = localStorage.getItem("hasVisited");
+  if (!hasVisited) {
+    setIsFirstVisit(true);
+    localStorage.setItem("hasVisited", "true");
+    setTimeout(() => {
+      if (newsRef.current) {
+        newsRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 500); // delay a bit after page load
+  }
+}, []);
 
   const scrollToSection = (section) => {
     if (section === "home" && homeRef.current)
@@ -229,6 +248,8 @@ export default function HomePage() {
     else if (section === "news" && newsRef.current)
       newsRef.current.scrollIntoView({ behavior: "smooth" });
   };
+
+  
 
   return (
     <div className="bg-[#1B1B1B] text-white font-sans min-h-screen overflow-x-hidden">
