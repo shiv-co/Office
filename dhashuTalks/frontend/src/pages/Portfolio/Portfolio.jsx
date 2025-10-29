@@ -18,29 +18,29 @@ const categories = [
     title: "YouTube ",
     icon: <FaYoutube className="text-4xl text-[#fec713]" />,
     items: [
-      { img: yt1, title: "Army Day 2025 celebrations", link: "#" },
-      { img: yt2, title: "Motivational Talks", link: "#" },
-      { img: yt3, title: "Kaun Hai Hum", link: "#"},
+      { img: yt1, title: "Who Should be our first guest ?", link: "https://www.youtube.com/shorts/-F4YB3Mn_Q4" },
+      { img: yt2, title: "Well Wishes by UP Deputy CM", link: "https://www.youtube.com/shorts/FFNaJj7VGeU" },
+      { img: yt3, title: "Official Trailer 1.0", link: "https://www.youtube.com/shorts/D-mF2YwSOQI"},
     ],
   },
-  {
-    title: "Podcast Episodes",
-    icon: <FaPodcast className="text-4xl text-[#fec713]" />,
-    items: [
-      { img: pod1, title: "The Hustler’s Mindset", link: "https://www.youtube.com/watch?v=fHBR1j1kJ1I&pp=ygUPcG9kY2FzdCBjaGFubmVs" },
-      { img: pod1, title: "Creativity Unplugged", link: "https://www.youtube.com/watch?v=fHBR1j1kJ1I&pp=ygUPcG9kY2FzdCBjaGFubmVs" },
-      { img: pod1, title: "Voices that Inspire", link: "https://www.youtube.com/watch?v=fHBR1j1kJ1I&pp=ygUPcG9kY2FzdCBjaGFubmVs" },
-    ],
-  },
-  {
-    title: "Event Gallery",
-    icon: <FaCameraRetro className="text-4xl text-[#fec713]" />,
-    items: [
-      { img: event1, title: "Podcast Summit 2024", link: "#" },
-      { img: event2, title: "Studio Sessions", link: "#" },
-      { img: event3, title: "Live Dhaasu Nights", link: "#" },
-    ],
-  },
+  // {
+  //   title: "Podcast Episodes",
+  //   icon: <FaPodcast className="text-4xl text-[#fec713]" />,
+  //   items: [
+  //     { img: pod1, title: "The Hustler’s Mindset", link: "https://www.youtube.com/watch?v=fHBR1j1kJ1I&pp=ygUPcG9kY2FzdCBjaGFubmVs" },
+  //     { img: pod1, title: "Creativity Unplugged", link: "https://www.youtube.com/watch?v=fHBR1j1kJ1I&pp=ygUPcG9kY2FzdCBjaGFubmVs" },
+  //     { img: pod1, title: "Voices that Inspire", link: "https://www.youtube.com/watch?v=fHBR1j1kJ1I&pp=ygUPcG9kY2FzdCBjaGFubmVs" },
+  //   ],
+  // },
+  // {
+  //   title: "Event Gallery",
+  //   icon: <FaCameraRetro className="text-4xl text-[#fec713]" />,
+  //   items: [
+  //     { img: event1, title: "Podcast Summit 2024", link: "#" },
+  //     { img: event2, title: "Studio Sessions", link: "#" },
+  //     { img: event3, title: "Live Dhaasu Nights", link: "#" },
+  //   ],
+  // },
 ];
 
 const Portfolio = () => {
@@ -85,7 +85,7 @@ const Portfolio = () => {
                   <img
                     src={item.img}
                     alt={item.title}
-                    className="w-full h-60 object-cover"
+                    className="w-full h-80 object-cover"
                   />
                   <div className="p-5">
                     <h3 className="text-xl font-semibold text-[#fec713]">
@@ -93,7 +93,7 @@ const Portfolio = () => {
                     </h3>
                     {/* <p className="text-gray-400 mt-2 text-sm">
                       Click to explore
-                    </p> */}
+                    </p>  */}
                   </div>
                 </motion.a>
               ))}
@@ -102,8 +102,34 @@ const Portfolio = () => {
 
         ))}
       </div>
+
+    
+      
+
+
+
+
+
+
+
+
+
+
     </div>
   );
 };
 
 export default Portfolio;
+
+
+
+
+
+
+
+
+
+
+
+
+
