@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import { FaYoutube, FaPodcast, FaCameraRetro } from "react-icons/fa";
 
 // Example image imports (replace with your actual assets)
-import yt1 from "../../assets/images/yt1.jpg";
-import yt2 from "../../assets/images/yt2.jpg";
-import yt3 from "../../assets/images/yt3.jpg";
+import yt1 from "../../assets/images/yt11.jpg";
+import yt2 from "../../assets/images/yt22.jpg";
+import yt3 from "../../assets/images/yt33.jpg";
 import pod1 from "../../assets/images/pod1.jpg";
 // import pod2 from "../../assets/images/pod2.jpg";
 // import pod3 from "../../assets/images/pod3.jpg";
@@ -15,12 +15,12 @@ import event3 from "../../assets/images/event3.jpg";
 
 const categories = [
   {
-    title: "YouTube Playlists",
+    title: "YouTube ",
     icon: <FaYoutube className="text-4xl text-[#fec713]" />,
     items: [
-      { img: pod1, title: "Army Day 2025 celebrations", link: "#" },
-      { img: pod1, title: "Motivational Talks", link: "#" },
-      { img: pod1, title: "Kaun Hai Hum", link: "#"},
+      { img: yt1, title: "Army Day 2025 celebrations", link: "#" },
+      { img: yt2, title: "Motivational Talks", link: "#" },
+      { img: yt3, title: "Kaun Hai Hum", link: "#"},
     ],
   },
   {

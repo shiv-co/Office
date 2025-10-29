@@ -9,6 +9,8 @@ import Services from "../Services/Services.jsx";
 import Footer from "../Footer/Footer.jsx";
 import Portfolio from "../Portfolio/Portfolio.jsx";
 import News from "../News/News.jsx";
+import Chatbot from "../../components/Chatbot.jsx"; // Added Chatbot import
+import WhatsAppButton from "../../components/whatsappBtn.jsx";
 // import Team from "../Team/Team.jsx";
 
 // TypingText Component
@@ -48,7 +50,7 @@ const Navbar = ({ scrolled, scrollToSection }) => {
         <div className="flex items-center space-x-3">
           <img src={DhashuLogo} alt="Dhaasu Talk Logo" className="h-14 md:h-16" />
           <h1 className="hidden lg:block text-2xl font-bold font-montserrat tracking-wide text-[#fec713]">
-            Dhaasu Talks
+            Dhasu Talks
           </h1>
         </div>
 
@@ -105,7 +107,7 @@ const Navbar = ({ scrolled, scrollToSection }) => {
             { name: "Services", ref: "services" },
             { name: "About Us", ref: "about" },
             { name: "Portfolio", ref: "portfolio" },
-              { name: "News", ref: "news" },
+             { name: "News", ref: "news" },
           ].map((item) => (
             <div
               key={item.name}
@@ -222,7 +224,7 @@ export default function HomePage() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  
+
   useEffect(() => {
   const hasVisited = localStorage.getItem("hasVisited");
   if (!hasVisited) {
@@ -249,7 +251,7 @@ export default function HomePage() {
       newsRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
-  
+
 
   return (
     <div className="bg-[#1B1B1B] text-white font-sans min-h-screen overflow-x-hidden">
@@ -268,6 +270,9 @@ export default function HomePage() {
         <News />
       </div>
       <Footer />
+      {/* Assuming you might want to render the Chatbot somewhere, e.g., fixed position */}
+      <WhatsAppButton/>
+      <Chatbot />
     </div>
   );
 }

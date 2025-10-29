@@ -47,10 +47,10 @@ const News = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        Latest <span className="text-[#fec713]">News</span>
+        <span className="text-[#fec713]">Dhasu </span>News Coming Soon...
       </motion.h2>
 
-      {/* Top Featured Section */}
+      {/* Top Featured Section
       <div className="flex flex-col md:flex-row gap-8 mb-16">
         <motion.div
           className="md:w-2/3 bg-[#222] rounded-2xl overflow-hidden shadow-lg hover:shadow-[#fec713]/40 transition"
@@ -116,7 +116,7 @@ const News = () => {
       {/* Scroll Buttons (visible only on mobile) */}
       
       {/* Grid (desktop) / Horizontal Scroll (mobile) */}
-      <motion.div
+      {/* <motion.div
         ref={scrollRef}
         className="flex overflow-x-auto space-x-5 scrollbar-hide md:grid md:grid-cols-3 md:gap-8"
         initial={{ opacity: 0 }}
@@ -155,7 +155,7 @@ const News = () => {
         >
           ▶ 
         </button>
-      </div>
+      </div>  */}
 
     </div>
   );
