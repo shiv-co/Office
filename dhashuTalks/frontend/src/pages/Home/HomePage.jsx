@@ -11,6 +11,8 @@ import Portfolio from "../Portfolio/Portfolio.jsx";
 import News from "../News/News.jsx";
 import Chatbot from "../../components/Chatbot.jsx"; // Added Chatbot import
 import WhatsAppButton from "../../components/whatsappBtn.jsx";
+import dhasu from "../../assets/icons/dhasu1.png"
+import talks from "../../assets/icons/talks3.png"
 // import Team from "../Team/Team.jsx";
 
 // TypingText Component
@@ -159,10 +161,21 @@ const HeroSection = React.forwardRef((props, ref) => (
         animate={{ opacity: 1, x: 0, y: 0 }}
         transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
       >
-        <span className="text-[#fec713] font-extrabold drop-shadow-[0_0_25px_rgba(254,225,0,0.5)]">
+         {/* <span className="text-[#fec713] font-extrabold drop-shadow-[0_0_25px_rgba(254,225,0,0.5)]">
           धासू
-        </span>{" "}
-        <span className="font-montserrat">Talks</span>
+        </span>{" "}  */}
+        <div className="flex justify-center items-center gap-x-2 md:gap-x-4">
+          <img 
+            src={dhasu} 
+            alt="धासू" 
+            className="h-[1.3em] w-auto mt-2 md:mt-5 drop-shadow-[0_0_25px_rgba(196,12,17,0.5)]" // Scales with parent's font size
+          />
+          <img 
+            src={talks} 
+            alt="Talks" 
+            className="h-[1.3em] w-auto" // Scales with parent's font size
+          />
+        </div>
       </motion.h2>
 
       <motion.p

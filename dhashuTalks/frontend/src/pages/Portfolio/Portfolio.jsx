@@ -9,9 +9,9 @@ import yt3 from "../../assets/images/yt33.jpg";
 import pod1 from "../../assets/images/pod1.jpg";
 // import pod2 from "../../assets/images/pod2.jpg";
 // import pod3 from "../../assets/images/pod3.jpg";
-import event1 from "../../assets/images/event1.jpg";
-import event2 from "../../assets/images/event2.jpg";
-import event3 from "../../assets/images/event3.jpg";
+import bts1 from "../../assets/images/bts1.jpg";
+import bts2 from "../../assets/images/bts2.jpg";
+import bts3 from "../../assets/images/bts3.jpg";
 
 const categories = [
   {
@@ -32,15 +32,15 @@ const categories = [
   //     { img: pod1, title: "Voices that Inspire", link: "https://www.youtube.com/watch?v=fHBR1j1kJ1I&pp=ygUPcG9kY2FzdCBjaGFubmVs" },
   //   ],
   // },
-  // {
-  //   title: "Event Gallery",
-  //   icon: <FaCameraRetro className="text-4xl text-[#fec713]" />,
-  //   items: [
-  //     { img: event1, title: "Podcast Summit 2024", link: "#" },
-  //     { img: event2, title: "Studio Sessions", link: "#" },
-  //     { img: event3, title: "Live Dhaasu Nights", link: "#" },
-  //   ],
-  // },
+  {
+    title: "Behind The Seens",
+    icon: <FaCameraRetro className="text-4xl text-[#fec713]" />,
+    items: [
+      { img: bts1, title: " ", link: " " },
+      { img: bts2, title: " ", link: " " },
+      { img: bts3, title: " ", link: " " },
+    ],
+  },
 ];
 
 const Portfolio = () => {
