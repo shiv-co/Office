@@ -238,7 +238,7 @@ const Portfolio = () => {
                   href={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[#111111] rounded-2xl overflow-hidden shadow-md hover:shadow-[#fec713]/40 hover:scale-[1.03] transition-all duration-300"
+                  className="bg-[#111111] rounded-2xl overflow-hidden truncate shadow-md hover:shadow-[#fec713]/40 hover:scale-[1.03] transition-all duration-300"
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: i * 0.1 }}

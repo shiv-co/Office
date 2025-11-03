@@ -116,7 +116,7 @@ const About = () => {
           transition={{ delay: 1.0 }}
         >
           <h3 className="text-2xl font-semibold text-[#fec713] mb-3">Core Values</h3>
-          <ul className="text-gray-300 space-y-2">
+          <ul className="text-gray-300 space-y-2 mb-8">
             <li>• Creativity with Purpose</li>
             <li>• Authentic Storytelling</li>
             <li>• Collaboration & Inclusion</li>
@@ -125,14 +125,17 @@ const About = () => {
           </ul>
         </motion.div>
 
-        {/* <motion.button
-          className="mt-8 bg-[#fec713] hover:bg-[#fed242] text-white font-semibold px-8 py-3 rounded-full transition"
+      <motion.a
+          href="https://wa.me/918542820507?text=Hi%20there!%20I%20would%20like%20to%20know%20more%20about%20Dhaasu%20Talks!"
+          target="_blank" // Opens WhatsApp in a new tab/app
+          rel="noopener noreferrer"
+          className="mt-8 bg-[#fec713] hover:bg-[#fed242] text-lg text-white font-semibold px-8 py-3 pt-5 rounded-full transition"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2 }}
         >
-          Discover More
-        </motion.button> */}
+          Contact Us
+        </motion.a>
       </div>
     </section>
   );

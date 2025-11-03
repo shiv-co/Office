@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import DhashuLogo from "../../assets/icons/dhaasuTalk.svg";
-import { FaSpotify, FaSoundcloud, FaApple, FaYoutube, FaInstagram, FaFacebook, FaBars, FaTimes } from "react-icons/fa";
+import { FaYoutube, FaInstagram, FaFacebook, FaBars, FaTimes } from "react-icons/fa";
 import Podcast_Img from "../../assets/images/podcast_Image.jpg";
 import { motion } from "framer-motion";
 
@@ -9,11 +9,12 @@ import Services from "../Services/Services.jsx";
 import Footer from "../Footer/Footer.jsx";
 import Portfolio from "../Portfolio/Portfolio.jsx";
 import News from "../News/News.jsx";
-import Chatbot from "../../components/Chatbot.jsx"; // Added Chatbot import
+import Chatbot from "../../components/Chatbot.jsx";
 import WhatsAppButton from "../../components/whatsappBtn.jsx";
-import dhasu from "../../assets/icons/dhasu1.png"
-import talks from "../../assets/icons/talks3.png"
-// import Team from "../Team/Team.jsx";
+import dhasu from "../../assets/icons/dhasu1.png";
+import talks from "../../assets/icons/talks3.png";
+import Careers from "../Careers/Careers.jsx";
+import Popup from "../../components/Popup.jsx";
 
 // TypingText Component
 const TypingText = ({ text, speed = 70 }) => {
@@ -33,7 +34,7 @@ const TypingText = ({ text, speed = 70 }) => {
 };
 
 // Navbar Component
-const Navbar = ({ scrolled, scrollToSection }) => {
+const Navbar = ({ scrolled, scrollToSection, aboutRef }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleMenuClick = (ref) => {
@@ -63,6 +64,7 @@ const Navbar = ({ scrolled, scrollToSection }) => {
             { name: "Services", ref: "services" },
             { name: "About Us", ref: "about" },
             { name: "Portfolio", ref: "portfolio" },
+            { name: "Careers", ref: "careers" },
             { name: "News", ref: "news" },
           ].map((item) => (
             <li
@@ -77,14 +79,12 @@ const Navbar = ({ scrolled, scrollToSection }) => {
 
         {/* Contact & Mobile Menu Icon */}
         <div className="flex items-center space-x-4">
-          <a
-            href="https://wa.me/919932012125?text=Hi%20there!%20I%20would%20like%20to%20know%20more%20about%20Dhaasu%20Talks!"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={() => scrollToSection("about")}
             className="hidden md:inline bg-[#fec713] px-5 py-2 rounded-full font-semibold hover:bg-[#fed242] transition"
           >
             Contact Us
-          </a>
+          </button>
 
           {/* Hamburger Icon */}
           <button
@@ -109,7 +109,7 @@ const Navbar = ({ scrolled, scrollToSection }) => {
             { name: "Services", ref: "services" },
             { name: "About Us", ref: "about" },
             { name: "Portfolio", ref: "portfolio" },
-             { name: "News", ref: "news" },
+            { name: "News", ref: "news" },
           ].map((item) => (
             <div
               key={item.name}
@@ -120,14 +120,15 @@ const Navbar = ({ scrolled, scrollToSection }) => {
             </div>
           ))}
 
-          <a
-            href="https://wa.me/919932012125?text=Hi%20there!%20I%20would%20like%20to%20know%20more%20about%20Dhaasu%20Talks!"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={() => {
+              scrollToSection("about");
+              setMenuOpen(false);
+            }}
             className="bg-[#fec713] px-6 py-2 rounded-full font-semibold hover:bg-[#fed242] transition inline-block"
           >
             Contact Us
-          </a>
+          </button>
         </motion.div>
       )}
     </nav>
@@ -161,20 +162,13 @@ const HeroSection = React.forwardRef((props, ref) => (
         animate={{ opacity: 1, x: 0, y: 0 }}
         transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
       >
-         {/* <span className="text-[#fec713] font-extrabold drop-shadow-[0_0_25px_rgba(254,225,0,0.5)]">
-          धासू
-        </span>{" "}  */}
         <div className="flex justify-center items-center gap-x-2 md:gap-x-4">
-          <img 
-            src={dhasu} 
-            alt="धासू" 
-            className="h-[1.3em] w-auto mt-2 md:mt-5 drop-shadow-[0_0_25px_rgba(196,12,17,0.5)]" // Scales with parent's font size
+          <img
+            src={dhasu}
+            alt="धासू"
+            className="h-[1.3em] w-auto mt-2 md:mt-5 drop-shadow-[0_0_25px_rgba(196,12,17,0.5)]"
           />
-          <img 
-            src={talks} 
-            alt="Talks" 
-            className="h-[1.3em] w-auto" // Scales with parent's font size
-          />
+          <img src={talks} alt="Talks" className="h-[1.3em] w-auto" />
         </div>
       </motion.h2>
 
@@ -189,7 +183,7 @@ const HeroSection = React.forwardRef((props, ref) => (
         <TypingText text="conversations and creative storytelling." />
       </motion.p>
 
-      {/* Social Buttons Grid */}
+      {/* Social Buttons */}
       <div className="grid grid-cols-2 sm:flex sm:flex-nowrap justify-center gap-4 mt-8">
         <a
           href="https://www.youtube.com/@Dhasutalksofficial/featured"
@@ -218,11 +212,7 @@ const HeroSection = React.forwardRef((props, ref) => (
 ));
 
 // HomePage Component
-
-
-
 export default function HomePage() {
-
   const [isFirstVisit, setIsFirstVisit] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -231,6 +221,7 @@ export default function HomePage() {
   const servicesRef = useRef(null);
   const portfolioRef = useRef(null);
   const newsRef = useRef(null);
+  const careersRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -239,17 +230,17 @@ export default function HomePage() {
   }, []);
 
   useEffect(() => {
-  const hasVisited = localStorage.getItem("hasVisited");
-  if (!hasVisited) {
-    setIsFirstVisit(true);
-    localStorage.setItem("hasVisited", "true");
-    setTimeout(() => {
-      if (newsRef.current) {
-        newsRef.current.scrollIntoView({ behavior: "smooth" });
-      }
-    }, 500); // delay a bit after page load
-  }
-}, []);
+    const hasVisited = localStorage.getItem("hasVisited");
+    if (!hasVisited) {
+      setIsFirstVisit(true);
+      localStorage.setItem("hasVisited", "true");
+      setTimeout(() => {
+        if (newsRef.current) {
+          newsRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 500);
+    }
+  }, []);
 
   const scrollToSection = (section) => {
     if (section === "home" && homeRef.current)
@@ -262,13 +253,17 @@ export default function HomePage() {
       portfolioRef.current.scrollIntoView({ behavior: "smooth" });
     else if (section === "news" && newsRef.current)
       newsRef.current.scrollIntoView({ behavior: "smooth" });
+    else if (section === "careers" && careersRef.current)
+      careersRef.current.scrollIntoView({ behavior: "smooth" });
   };
-
-
 
   return (
     <div className="bg-[#1B1B1B] text-white font-sans min-h-screen overflow-x-hidden">
-      <Navbar scrolled={scrolled} scrollToSection={scrollToSection} />
+      <Navbar
+        scrolled={scrolled}
+        scrollToSection={scrollToSection}
+        aboutRef={aboutRef}
+      />
       <HeroSection ref={homeRef} />
       <div ref={servicesRef}>
         <Services />
@@ -279,13 +274,16 @@ export default function HomePage() {
       <div ref={portfolioRef}>
         <Portfolio />
       </div>
+      <div ref={careersRef}>
+        <Careers />
+      </div>
       <div ref={newsRef}>
         <News />
       </div>
       <Footer />
-      {/* Assuming you might want to render the Chatbot somewhere, e.g., fixed position */}
-      <WhatsAppButton/>
+      <WhatsAppButton />
       <Chatbot />
+      <Popup />
     </div>
   );
 }

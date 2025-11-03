@@ -2,7 +2,7 @@ import React from 'react';
 import { FaWhatsapp } from 'react-icons/fa'; // Import the WhatsApp icon
 
 // Define your phone number and pre-filled message
-const WHATSAPP_NUMBER = "919932012125"; // Replace with your number (include country code, no '+')
+const WHATSAPP_NUMBER = "8542820507"; // Replace with your number (include country code, no '+')
 const PREFILLED_MESSAGE = "Hi there! I would like to know more about Dhaasu Talks!";
 
 // Encode the message for the URL
