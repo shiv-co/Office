@@ -15,6 +15,8 @@ import dhasu from "../../assets/icons/dhasu1.png";
 import talks from "../../assets/icons/talks3.png";
 import Careers from "../Careers/Careers.jsx";
 import Popup from "../../components/Popup.jsx";
+import Contact from "../contactUs/contactUs.jsx";
+
 
 // TypingText Component
 const TypingText = ({ text, speed = 70 }) => {
@@ -80,7 +82,7 @@ const Navbar = ({ scrolled, scrollToSection, aboutRef }) => {
         {/* Contact & Mobile Menu Icon */}
         <div className="flex items-center space-x-4">
           <button
-            onClick={() => scrollToSection("about")}
+            onClick={() => scrollToSection("contact")}
             className="hidden md:inline bg-[#fec713] px-5 py-2 rounded-full font-semibold hover:bg-[#fed242] transition"
           >
             Contact Us
@@ -121,10 +123,7 @@ const Navbar = ({ scrolled, scrollToSection, aboutRef }) => {
           ))}
 
           <button
-            onClick={() => {
-              scrollToSection("about");
-              setMenuOpen(false);
-            }}
+           onClick={() => scrollToSection("contact")}
             className="bg-[#fec713] px-6 py-2 rounded-full font-semibold hover:bg-[#fed242] transition inline-block"
           >
             Contact Us
@@ -222,6 +221,8 @@ export default function HomePage() {
   const portfolioRef = useRef(null);
   const newsRef = useRef(null);
   const careersRef = useRef(null);
+  const contactRef = useRef(null);
+
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -255,6 +256,9 @@ export default function HomePage() {
       newsRef.current.scrollIntoView({ behavior: "smooth" });
     else if (section === "careers" && careersRef.current)
       careersRef.current.scrollIntoView({ behavior: "smooth" });
+    else if (section === "contact" && contactRef.current)
+  contactRef.current.scrollIntoView({ behavior: "smooth" });
+
   };
 
   return (
@@ -280,6 +284,10 @@ export default function HomePage() {
       <div ref={newsRef}>
         <News />
       </div>
+      <div ref={contactRef}>
+        <Contact />
+      </div>
+
       <Footer />
       <WhatsAppButton />
       <Chatbot />
