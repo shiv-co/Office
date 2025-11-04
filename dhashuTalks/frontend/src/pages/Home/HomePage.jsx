@@ -15,7 +15,8 @@ import dhasu from "../../assets/icons/dhasu1.png";
 import talks from "../../assets/icons/talks3.png";
 import Careers from "../Careers/Careers.jsx";
 import Popup from "../../components/Popup.jsx";
-import Contact from "../contactUs/contactUs.jsx";
+// import Contact from "../contactUs/ContactUs.jsx";
+import Contact from "../Contact/Contact.jsx";
 
 
 // TypingText Component
