@@ -95,13 +95,13 @@ export default function Contact() {
               transition={{ delay: 0.2 }}
             >
               <a href="https://www.youtube.com/@Dhasutalksofficial/featured" target="_blank" rel="noreferrer" className="p-3 bg-[#111111] rounded-full hover:bg-[#262626]">
-                <FaYoutube className="text-[#fec713]" />
+                <FaYoutube size={24} className="text-[#fec713]" />
               </a>
               <a href="https://www.instagram.com/dhasutalks" target="_blank" rel="noreferrer" className="p-3 bg-[#111111] rounded-full hover:bg-[#262626]">
-                <FaInstagram className="text-[#fec713]" />
+                <FaInstagram  size={24} className="text-[#fec713]" />
               </a>
               <a href="https://www.facebook.com/dhasutalks" target="_blank" rel="noreferrer" className="p-3 bg-[#111111] rounded-full hover:bg-[#262626]">
-                <FaFacebook className="text-[#fec713]" />
+                <FaFacebook  size={24} className="text-[#fec713]" />
               </a>
             </motion.div>
           </motion.div>

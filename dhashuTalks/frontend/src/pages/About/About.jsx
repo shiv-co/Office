@@ -125,7 +125,7 @@ const About = () => {
           </ul>
         </motion.div>
 
-      <motion.a
+      {/* <motion.a
           href="https://wa.me/918542820507?text=Hi%20there!%20I%20would%20like%20to%20know%20more%20about%20Dhaasu%20Talks!"
           target="_blank" // Opens WhatsApp in a new tab/app
           rel="noopener noreferrer"
@@ -135,7 +135,7 @@ const About = () => {
           transition={{ delay: 1.2 }}
         >
           Contact Us
-        </motion.a>
+        </motion.a> */}
       </div>
     </section>
   );
