@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaTimes } from "react-icons/fa";
-import promoImage from "../assets/images/popup.jpg"; // replace with your image path
+import promoImage from "../assets/images/podcast_ep1.webp"; // replace with your image path
 
 export default function Popup() {
   const [showPopup, setShowPopup] = useState(true);
