@@ -20,6 +20,7 @@ export default function Popup() {
     setShowPopup(false);
   };
 
+
   return (
     <AnimatePresence>
       {showPopup && (
@@ -56,12 +57,14 @@ export default function Popup() {
               <p className="text-sm text-gray-400 mb-3">
                 Where conversations create impact 🎙️  
               </p>
-              <button
-                onClick={handleClose}
+              <a
+                href="https://www.youtube.com/watch?v=eHRQ_I2dhMY"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-[#fec713] text-black px-5 py-2 rounded-full font-semibold hover:bg-[#fed242] transition"
               >
-                Let’s Go
-              </button>
+                Watch Our Latest Episode
+              </a>
             </div>
           </motion.div>
         </motion.div>

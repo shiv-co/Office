@@ -116,6 +116,8 @@ import { FaYoutube, FaCameraRetro, FaPodcast } from "react-icons/fa";
 import { MdSwipe } from "react-icons/md";
 
 // Example images
+import pod_ep1 from "../../assets/images/podcast_ep1.webp";
+import yt5 from "../../assets/images/yt5.jpg";
 import yt4 from "../../assets/images/yt4.jpg";
 import yt1 from "../../assets/images/yt11.jpg";
 import yt2 from "../../assets/images/yt22.jpg";
@@ -132,6 +134,18 @@ const categories = [
     title: "YouTube",
     icon: <FaYoutube className="text-4xl text-[#fec713]" />,
     items: [
+      {
+        img: pod_ep1,
+        title:
+          "Candid Conversion with Sachin Pandey, Producer Thukra Ke Mera Pyaar",
+        link: "https://www.youtube.com/watch?v=eHRQ_I2dhMY",
+      },
+      {
+        img: yt5,
+        title:
+          "Producer Sachin Pandey’s Special Message for Dhasu Talks ",
+        link: "https://www.youtube.com/shorts/yXV_75X1wPk",
+      },
       {
         img: yt4,
         title:
